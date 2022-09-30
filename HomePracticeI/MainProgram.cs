@@ -1,6 +1,8 @@
 ﻿namespace HomePracticeI;
 internal class MainProgram
 {
+    const int errorNum = 2147483647;
+
     public void Run()
     {
         //První úkol
@@ -15,11 +17,11 @@ internal class MainProgram
 
         Console.ForegroundColor = ConsoleColor.DarkGreen;
 
-        if (int01 == 2147483647 && int02 == 2147483647)
+        if (int01 == errorNum && int02 == errorNum)
         {
             Console.WriteLine("Proč píšeš písmena. Řekl jsem čísla ne?");
         }
-        else if (int01 == 2147483647 || int02 == 2147483647)
+        else if (int01 == errorNum || int02 == errorNum)
         {
             Console.WriteLine("Jedno ze zadaných čísel není číslo.");
         }
@@ -71,7 +73,7 @@ internal class MainProgram
 
         Console.ForegroundColor = ConsoleColor.DarkGreen;
 
-        if (int03 == 2147483647 || int04 == 2147483647 || int05 == 2147483647 || int06 == 2147483647)
+        if (int03 == errorNum || int04 == errorNum || int05 == errorNum || int06 == errorNum)
         {
             Console.WriteLine("Proč píšeš písmena. Řekl jsem čísla ne?");
         }
@@ -107,8 +109,9 @@ internal class MainProgram
 
         PrintDelimiter();
 
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.Write("Zadejte operaci (add, sub, mul, div): ");
-        Console.ForegroundColor = ConsoleColor.Green;
+        Console.ForegroundColor = ConsoleColor.Red;
         string oper = Console.ReadLine();
         Console.ForegroundColor = ConsoleColor.White;
 
@@ -116,11 +119,11 @@ internal class MainProgram
 
         Console.ForegroundColor = ConsoleColor.DarkGreen;
 
-        if (int09 == 2147483647 && int10 == 2147483647)
+        if (int09 == errorNum && int10 == errorNum)
         {
             Console.WriteLine("Proč píšeš písmena. Řekl jsem čísla ne?");
         }
-        else if (int09 == 2147483647 || int10 == 2147483647)
+        else if (int09 == errorNum || int10 == errorNum)
         {
             Console.WriteLine("Jedno ze zadaných čísel není číslo.");
         }
@@ -159,17 +162,20 @@ internal class MainProgram
         }
         else
         {
-            return 2147483647;
+            return errorNum;
         }
     }
 
     public void PrintDelimiter()
     {
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        Console.ForegroundColor = ConsoleColor.White;
     }
 
     public int AskNumber()
     {
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.Write("Zadejte číslo: ");
         Console.ForegroundColor = ConsoleColor.Red;
         string a = Console.ReadLine();

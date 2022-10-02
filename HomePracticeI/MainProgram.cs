@@ -145,7 +145,7 @@ internal class MainProgram
         }
         else
         {
-            Console.WriteLine("Nebyla zadána validní odpověď.");
+            Console.WriteLine("Nebyla zadána validní operace.");
         }
 
         Console.ForegroundColor = ConsoleColor.White;
